@@ -1,0 +1,51 @@
+<?xml version = "1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Auto data sync"
+        android:key="sync_settings">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_sync"
+            android:summary="Allow app to sync data automatically, when wifi is available"
+            android:title="Allow sync" />
+
+        <ListPreference
+            android:dependency="pref_sync"
+            android:dialogTitle="Sync interval"
+            android:entries="@array/pref_syncConnectionTypes_entries"
+            android:entryValues="@array/pref_syncConnectionTypes_values"
+            android:key="pref_sync_list"
+            android:title="Sync interval"
+            android:summary="%s"
+            android:defaultValue="1 min"/>
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Sort emails"
+        android:key="sort_emails">
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_sort"
+            android:summary="Sort emails by date"
+            android:title="Allow sorting" />
+
+        <ListPreference
+            android:dependency="pref_sort"
+            android:dialogTitle="Sort"
+            android:entries="@array/pref_sort_entries"
+            android:entryValues="@array/pref_sort_values"
+            android:key="pref_sort_list"
+            android:title="Sort"
+            android:summary="%s"
+            android:defaultValue="Ascending"
+            />
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
