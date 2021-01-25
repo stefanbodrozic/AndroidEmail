@@ -1,9 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activities.CreateEmailActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/et_create_email_receiver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:hint="Send to"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/et_create_email_cc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:hint="CC"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/et_create_email_bcc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:hint="BCC"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/et_create_email_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:hint="Subject"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_create_email_content"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:hint="Content"
+            android:inputType="text" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSendEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="25dp"
+        android:text="Send" />
+
+    <Button
+        android:id="@+id/btnCancelEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="250dp"
+        android:layout_marginBottom="25dp"
+        android:text="Cancel" />
+
+</RelativeLayout>
